@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آلة حاسبة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button onclick="Open()" class="open">☰</button>
+    <div class="calculator">
+        <div class="header">
+            <div>آلة حاسبة</div>
+            <div onclick="Close()" class="close">X</div> 
+        </div>
+
+        <!-- Display History Above -->
+        <div id="history" class="history"></div>
+
+        <!-- Main Input -->
+        <input readonly type="text" id="input" placeholder="٠" oninput="liveCalculate()">
+
+        <!-- Live Answer Below -->
+        <div id="live-result" class="live-result"></div>
+
+        <div class="buttons">
+            <button onclick="ac()" class="operator">(C) مسح</button>
+            <button onclick="del()" class="operator">(x) حذف</button>
+            <button onclick="btn('%')" class="operator">(%) نسبة مئوية</button>
+            <button onclick="btn('÷')" class="operator">(÷) قسمة</button>
+
+            <button onclick="btn('٧')">٧</button>
+            <button onclick="btn('٨')">٨</button>
+            <button onclick="btn('٩')">٩</button>
+            <button onclick="btn('*')" class="operator">(*) ضرب</button>
+
+            <button onclick="btn('٤')">٤</button>
+            <button onclick="btn('٥')">٥</button>
+            <button onclick="btn('٦')">٦</button>
+            <button onclick="btn('-')" class="operator">(-) ناقص</button>
+
+            <button onclick="btn('١')">١</button>
+            <button onclick="btn('٢')">٢</button>
+            <button onclick="btn('٣')">٣</button>
+            <button onclick="btn('+')" class="operator">(+) زائد</button>
+
+            <button onclick="btn('٠٠')">٠٠</button>
+            <button onclick="btn('٠')">٠</button>
+            <button onclick="btn('.')">.</button>
+            <button onclick="equ()" class="equal-btn">(=) يساوي</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

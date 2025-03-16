@@ -1,0 +1,143 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+html, body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #e7e7e7;
+    color: white;
+}
+
+/* Calculator Container */
+.calculator {
+    background: #222;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    width: 95%;
+   
+}
+
+/* Header */
+.calculator .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Close Button */
+.close {
+    cursor: pointer;
+    font-size: 15px;
+    color: rgb(248, 137, 137);
+}
+
+/* Display History */
+.history {
+    font-size: 18px;
+    color: #aaa;
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+/* Display Input */
+input {
+    width: 100%;
+    height: 70px;
+    text-align: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+/* Live Answer Below */
+.live-result {
+    text-align: right;
+    font-size: 22px;
+    color: #0a84ff;
+    margin-bottom: 10px;
+    
+}
+
+/* Buttons Container */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Calculator Buttons */
+button {
+    width: 100%;
+    height: 60px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    
+}
+
+/* Button Hover & Active Effects */
+button:hover {
+    background-color: #666;
+}
+button:active {
+    background-color: #888;
+}
+
+/* Operator Buttons */
+.operator {
+    background-color: #6e6d6d;
+    color: rgb(197, 193, 193);
+}
+.operator:hover {
+    background-color: #8d8c8c;
+}
+
+/* Equal Button */
+.equal-btn {
+    background-color: #0a84ff;
+    color: white;
+}
+.equal-btn:hover {
+    background-color: #409cff;
+}
+
+/* Open Button (Hidden Mode) */
+.open {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+/* Hide Calculator */
+.active {
+    visibility: hidden;
+}
