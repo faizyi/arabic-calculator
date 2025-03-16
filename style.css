@@ -79,7 +79,6 @@ input {
     text-overflow: ellipsis; /* Adds '...' if text is too long */
     white-space: nowrap; /* Prevents text from wrapping */
     padding: 5px;
-    /* background: #1a1a1a; Optional: background to differentiate */
     border-radius: 8px; /* Optional: rounded edges */
 }
 
