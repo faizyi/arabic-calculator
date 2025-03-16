@@ -33,6 +33,11 @@ function liveCalculate() {
         // console.log(converted);
          // Convert Arabic to English for eval()
         
+         if (!/[+\-×÷٪]/.test(converted)) {
+            liveResult.innerText = englishToArabicNumbers(converted); // If no operator, clear live result
+            return;
+        }
+
         // Prevent eval errors with invalid input
         if (converted.match(/[\+\-\*\/]$/)) {
             liveResult.innerText = englishToArabicNumbers(converted);
