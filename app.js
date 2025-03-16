@@ -14,9 +14,7 @@ function englishToArabicNumbers(str) {
 }
 
 // Insert numbers into the input field
-function btn(e) {
-    console.log(e);
-    
+function btn(e) {    
     document.getElementById("input").value += e;
     liveCalculate(); // Update live result
 }
@@ -40,12 +38,14 @@ function liveCalculate() {
 
         // Prevent eval errors with invalid input
         if (converted.match(/[\+\-\*\/]$/)) {
+            console.log(converted);
+            
             liveResult.innerText = englishToArabicNumbers(converted);
             return;
         }
 
         let result = eval(converted); // Evaluate the equation
-        // console.log(result);
+        console.log(result);
         
         
         if (!isNaN(result)) {
@@ -100,3 +100,4 @@ function percen() {
         liveCalculate();
     }
 }
+

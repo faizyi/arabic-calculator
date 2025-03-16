@@ -73,7 +73,14 @@ input {
     font-size: 22px;
     color: #0a84ff;
     margin-bottom: 10px;
-    width: 100%;
+    width: 370px;
+    word-wrap: break-word; /* Ensures text breaks if too long */
+    overflow: hidden; /* Prevents overflow */
+    text-overflow: ellipsis; /* Adds '...' if text is too long */
+    white-space: nowrap; /* Prevents text from wrapping */
+    padding: 5px;
+    /* background: #1a1a1a; Optional: background to differentiate */
+    border-radius: 8px; /* Optional: rounded edges */
 }
 
 /* Buttons Container */
