@@ -31,7 +31,7 @@ function liveCalculate() {
         // console.log(converted);
          // Convert Arabic to English for eval()
         
-         if (!/[+\-×÷٪]/.test(converted)) {
+         if (!/[+\-×/٪]/.test(converted)) {
             liveResult.innerText = englishToArabicNumbers(converted); // If no operator, clear live result
             return;
         }
@@ -51,7 +51,7 @@ function liveCalculate() {
         if (!isNaN(result)) {
             console.log(result);
             
-            liveResult.innerText = englishToArabicNumbers(result.toString()); // Convert result back to Arabic
+            liveResult.innerHTML = englishToArabicNumbers(result.toString()); // Convert result back to Arabic
         } else {
             liveResult.innerText = "";
         }
@@ -94,10 +94,12 @@ function Open() { document.querySelector(".calculator").classList.remove("active
 // Percentage Calculation (Now Works with Live Update)
 function percen() {
     const inp = document.getElementById("input");
-    
-    if (inp.value.match(/\d+$/)) { // If the last character is a number
-        inp.value += "٪"; // Append Arabic percentage sign
-        liveCalculate();
+    let value = arabicToEnglishNumbers(inp.value);
+
+    if (value && !isNaN(value)) {
+        let result = eval(value) / 100; // Convert to percentage
+        inp.value = englishToArabicNumbers(result.toString()); // Display Arabic result
+        liveCalculate(); // Update live result
     }
 }
 
