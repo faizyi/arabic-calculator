@@ -49,6 +49,13 @@ html, body {
     color: #aaa;
     text-align: right;
     margin-bottom: 5px;
+    width: 370px;
+    word-wrap: break-word; /* Ensures text breaks if too long */
+    overflow: hidden; /* Prevents overflow */
+    text-overflow: clip; /* Adds '...' if text is too long */
+    white-space: nowrap; /* Prevents text from wrapping */
+    padding: 5px;
+    border-radius: 8px;
 }
 
 /* Display Input */
@@ -76,7 +83,7 @@ input {
     width: 370px;
     word-wrap: break-word; /* Ensures text breaks if too long */
     overflow: hidden; /* Prevents overflow */
-    text-overflow: ellipsis; /* Adds '...' if text is too long */
+    text-overflow: clip; /* Adds '...' if text is too long */
     white-space: nowrap; /* Prevents text from wrapping */
     padding: 5px;
     border-radius: 8px; /* Optional: rounded edges */

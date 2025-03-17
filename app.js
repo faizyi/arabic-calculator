@@ -14,9 +14,12 @@ function englishToArabicNumbers(str) {
 }
 
 // Insert numbers into the input field
-function btn(e) {    
-    document.getElementById("input").value += e;
-    liveCalculate(); // Update live result
+function btn(e) {  
+    
+    // document.getElementById("input").value += e;
+    const inp = document.getElementById("input").value += e;
+        liveCalculate(); // Update live result
+
 }
 
 // Live Calculation as User Types
